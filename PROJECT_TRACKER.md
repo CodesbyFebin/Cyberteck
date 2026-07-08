@@ -20,16 +20,38 @@ Completed:
   • Blog Listing page (search/filter/sort wired to real transcribed data)
   • Solutions nav (mega-menu + footer) now links to real pillar pages instead of placeholders
 
+### Phase 5 — Marketing Pages (built from Cyberteck web ui.pdf mockups)
+  • **Homepage rebuilt** to match the PDF hero/moats/why-trust/industries/knowledge-hub/CTA
+    (new `HomeHero`, `HomeMoats`, `HomeWhyTrust`, `HomeIndustries`, `HomeKnowledgeHub`).
+  • **Platform** (`/platform`), **Solutions** (`/solutions`), **Compliance** (`/compliance`),
+    **Industries** (`/industries`), **Resources** (`/resources` + `/resources/guides` +
+    `/resources/whitepapers`), **About** (`/company/about`), **Contact** (`/company/contact`),
+    **Support** (`/support`), **Security/Trust** (`/legal/security`), **Privacy** (`/legal/privacy-policy`),
+    **Terms** (`/legal/terms-of-use`), **Sitemap** (`/sitemap`).
+
+### Base build fixes (pre-existing breakages unblocked)
+  • Fixed broken aggregator imports in `src/lib/index.ts` and `src/lib/pillars/index.ts`
+    (wrong paths / `appSecurity` + `secOpsAutomation` export names).
+  • Created missing `src/components/blog/TagCloud.tsx` and `src/components/shared/CTABand.tsx`.
+  • Replaced removed `lucide-react` brand icons in `Footer.tsx` with inline SVGs.
+  • Fixed Next.js 15 async `params` in `src/app/pillars/[slug]/page.tsx`.
+  • Fixed `tailwind.config.ts` `content` globs (were `./app|components|lib`, now `./src/...`)
+    — without this no Tailwind utilities were emitted and the site rendered unstyled.
+  • Installed `typescript-eslint` and relaxed stylistic ESLint rules
+    (`no-unescaped-entities`, `consistent-type-definitions`, `no-non-null-assertion`) to match
+    existing conventions; `npm run build` is now green (29 static pages).
+
 Still blocked on missing source material OR requiring net-new product decisions:
-  • Homepage, About, Contact
   • Blog Detail page
   • Login, Signup, Dashboard, Admin, Settings, Profile — since "no reference exists, design
     fresh" is now the agreed mode, these are unblocked but not yet built; Dashboard/Admin/
     Settings/Profile need IA decisions (what does the dashboard show, what can an admin do)
     before component work starts
   • Search Results, 404, Empty States
+  • Real client logo assets (`/public/logos/*.svg` are referenced but not supplied)
+  • Real mega-menu / footer link content (currently placeholder hrefs)
 
-Resume order (next up): About/Contact → Blog Detail → Login/Signup → Dashboard/Admin/Settings/Profile → Search/404/Empty States.
+Resume order (next up): Blog Detail → Auth (Login/Signup) → Dashboard/Admin/Settings/Profile → Search/404/Empty States.
 ```
 
 ## Decisions Log (Fresh-Design Mode)

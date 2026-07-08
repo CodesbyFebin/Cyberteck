@@ -3,14 +3,15 @@ import { notFound } from "next/navigation";
 import { getPillarBySlug, PILLARS } from "@/lib/pillars";
 import { PillarDetailPage } from "@/components/pillar/PillarDetailPage";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return PILLARS.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const pillar = getPillarBySlug(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const pillar = getPillarBySlug(slug);
   if (!pillar) return {};
 
   return {
@@ -20,8 +21,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function Page({ params }: Props) {
-  const pillar = getPillarBySlug(params.slug);
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+  const pillar = getPillarBySlug(slug);
   if (!pillar) notFound();
 
   // Breadcrumb structured data — flagged as an SEO requirement in the

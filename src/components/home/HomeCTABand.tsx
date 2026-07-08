@@ -15,7 +15,7 @@ export function HomeCTABand() {
       <div className="surface-card grid grid-cols-1 items-center gap-10 p-10 lg:grid-cols-2">
         <div>
           <h2 className="font-display text-3xl font-bold text-text-primary">
-            See All 10 Pillars Working Together.
+            Ready to Secure. Comply. Grow.
           </h2>
           <p className="mt-3 text-text-secondary">
             Book a personalized walkthrough and see how Cyberteck's AI-native platform maps to
