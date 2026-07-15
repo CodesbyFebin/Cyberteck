@@ -146,3 +146,7 @@ export const CLIENT_LOGOS: ClientLogo[] = [
 export const SITE_NAME = "CyberTeck";
 export const SITE_TAGLINE = "AI-Native Cybersecurity & Compliance OS";
 export const FOOTER_STRAPLINE = "Securing India's Digital Future with AI.";
+
+// Canonical production origin — single source of truth for metadataBase,
+// canonical URLs, structured data, robots.ts, sitemap.ts, and llms.txt.
+export const SITE_URL = "https://cyberteck.in";

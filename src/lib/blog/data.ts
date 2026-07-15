@@ -1,16 +1,5 @@
 import type { BlogCategory, BlogPost, BlogTag } from "./types";
 
-export const BLOG_CATEGORIES: BlogCategory[] = [
-  { slug: "all", label: "All Topics", count: 56 },
-  { slug: "ai-security", label: "AI Security", count: 12 },
-  { slug: "cloud-security", label: "Cloud Security", count: 10 },
-  { slug: "compliance", label: "Compliance", count: 8 },
-  { slug: "data-protection", label: "Data Protection", count: 9 },
-  { slug: "identity-security", label: "Identity Security", count: 7 },
-  { slug: "threat-intelligence", label: "Threat Intelligence", count: 6 },
-  { slug: "industry-insights", label: "Industry Insights", count: 4 },
-];
-
 export const POPULAR_TAGS: BlogTag[] = [
   { slug: "zero-trust", label: "Zero Trust" },
   { slug: "soc-2", label: "SOC 2" },
@@ -22,10 +11,9 @@ export const POPULAR_TAGS: BlogTag[] = [
   { slug: "cyber-resilience", label: "Cyber Resilience" },
 ];
 
-// First 9 of 56 posts (page 1), transcribed verbatim from the source
-// screenshot. Posts 10-56 are not yet provided — pagination below is wired
-// to a real total (56 across 7 pages of 9) so the UI is honest even though
-// only page 1's content exists.
+// Only these posts have real, transcribed content. Category/total counts
+// below are derived from this array rather than hardcoded, so the listing
+// UI never claims more posts exist than actually have pages to show.
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "cloud-security-best-practices-2024",
@@ -110,5 +98,26 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 ];
 
-export const TOTAL_POSTS = 56;
+const CATEGORY_LABELS: { slug: string; label: string }[] = [
+  { slug: "ai-security", label: "AI Security" },
+  { slug: "cloud-security", label: "Cloud Security" },
+  { slug: "compliance", label: "Compliance" },
+  { slug: "data-protection", label: "Data Protection" },
+  { slug: "identity-security", label: "Identity Security" },
+  { slug: "threat-intelligence", label: "Threat Intelligence" },
+  { slug: "devsecops", label: "DevSecOps" },
+  { slug: "cyber-resilience", label: "Cyber Resilience" },
+  { slug: "industry-insights", label: "Industry Insights" },
+];
+
+export const BLOG_CATEGORIES: BlogCategory[] = [
+  { slug: "all", label: "All Topics", count: BLOG_POSTS.length },
+  ...CATEGORY_LABELS.map(({ slug, label }) => ({
+    slug,
+    label,
+    count: BLOG_POSTS.filter((post) => post.category === label).length,
+  })),
+];
+
+export const TOTAL_POSTS = BLOG_POSTS.length;
 export const POSTS_PER_PAGE = 9;

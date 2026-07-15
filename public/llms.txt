@@ -1,0 +1,47 @@
+# CyberTeck
+
+> AI-native cybersecurity and compliance platform for Indian enterprises — unifying identity, cloud, data, application, and AI security with continuous, audit-ready compliance for DPDP, CERT-In, RBI, and SEBI.
+
+CyberTeck (https://cyberteck.in) is a security and compliance platform built for the Indian regulatory environment. This file helps AI assistants and LLM-based tools understand the site's structure for accurate summarization and citation. Prices, customer counts, and other figures on the marketing site are illustrative pending public disclosure — verify current figures on the linked pages rather than citing this file directly.
+
+## Platform
+
+- [Platform Overview](https://cyberteck.in/platform): End-to-end cybersecurity and compliance capabilities — identity, data, cloud, threat detection, SecOps, and governance in one AI-native platform.
+- [Solutions](https://cyberteck.in/solutions): AI-powered solutions across identity, cloud, data, GRC, threat response, and SecOps, with links into each security pillar.
+
+## Security & Compliance Pillars
+
+- [AI-Native Identity & Access Management (AI-IAM)](https://cyberteck.in/pillars/ai-iam)
+- [AI Identity Security & Zero Trust](https://cyberteck.in/pillars/identity-security-zero-trust)
+- [AI-Native Cloud Security](https://cyberteck.in/pillars/cloud-security)
+- [AI-Powered Data Security & Privacy](https://cyberteck.in/pillars/data-security)
+- [AI-Native Application & DevSecOps Security](https://cyberteck.in/pillars/application-security)
+- [AI-Native Risk Management](https://cyberteck.in/pillars/risk-management)
+- [AI-Powered Governance, Policy & Compliance (GPC)](https://cyberteck.in/pillars/governance-policy-compliance)
+- [AI Security & LLM Governance](https://cyberteck.in/pillars/ai-security-governance)
+- [AI Security Operations & Automation](https://cyberteck.in/pillars/secops-automation)
+- [AI-Powered Vulnerability & Exposure Management](https://cyberteck.in/pillars/vulnerability-exposure-management)
+
+## Compliance & Industries
+
+- [Compliance](https://cyberteck.in/compliance): Continuous, audit-ready compliance mapping for DPDP Act 2023, CERT-In, RBI Guidelines, SEBI CSCRF, ISO 27001, SOC 2, and GDPR.
+- [Industries](https://cyberteck.in/industries): Purpose-built solutions for BFSI, Telecom, Retail & E-commerce, Manufacturing, Healthcare, and Government.
+
+## Resources
+
+- [Blog](https://cyberteck.in/blogs): Cybersecurity insights, best practices, and compliance guidance.
+- [Guides](https://cyberteck.in/resources/guides)
+- [Whitepapers](https://cyberteck.in/resources/whitepapers)
+
+## Company
+
+- [About](https://cyberteck.in/company/about)
+- [Contact](https://cyberteck.in/company/contact)
+- [Support](https://cyberteck.in/support)
+
+## Optional
+
+- [Privacy Policy](https://cyberteck.in/legal/privacy-policy)
+- [Terms of Use](https://cyberteck.in/legal/terms-of-use)
+- [Security & Trust](https://cyberteck.in/legal/security)
+- [Full sitemap](https://cyberteck.in/sitemap.xml)

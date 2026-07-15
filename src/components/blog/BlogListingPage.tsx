@@ -18,12 +18,13 @@ export function BlogListingPage() {
   const [sort, setSort] = useState("latest");
   const [page, setPage] = useState(1);
 
-  const totalPages = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE); // 7, matches source
+  const totalPages = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE);
 
-  // NOTE: only page 1's 9 posts have real transcribed content (see
-  // lib/blog/data.ts). Search/category/sort operate on that real set; pages
-  // 2-7 are not backed by data yet and simply show the same result set
-  // until posts 10-56 are transcribed or a CMS/API is wired in.
+  // NOTE: TOTAL_POSTS/BLOG_CATEGORIES counts are derived from the real
+  // BLOG_POSTS array (see lib/blog/data.ts) — only 9 posts have transcribed
+  // content today. Add more entries there (and, once built, /blogs/[slug]
+  // detail pages) as real posts become available; pagination and counts
+  // will update automatically.
   const filtered = useMemo(() => {
     let posts = [...BLOG_POSTS];
 
