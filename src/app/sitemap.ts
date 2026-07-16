@@ -19,13 +19,16 @@ const STATIC_ROUTES: RouteConfig[] = [
   { path: "/resources/whitepapers", changeFrequency: "weekly", priority: 0.6 },
   { path: "/blogs", changeFrequency: "daily", priority: 0.8 },
   { path: "/company/about", changeFrequency: "monthly", priority: 0.5 },
+  { path: "/company-about", changeFrequency: "monthly", priority: 0.5 },
   { path: "/company/contact", changeFrequency: "yearly", priority: 0.4 },
   { path: "/book-assessment", changeFrequency: "monthly", priority: 0.7 },
   { path: "/dashboard", changeFrequency: "monthly", priority: 0.6 },
   { path: "/support", changeFrequency: "monthly", priority: 0.4 },
   { path: "/legal/privacy-policy", changeFrequency: "yearly", priority: 0.2 },
+  { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.2 },
   { path: "/legal/security", changeFrequency: "yearly", priority: 0.3 },
   { path: "/legal/terms-of-use", changeFrequency: "yearly", priority: 0.2 },
+  { path: "/terms-of-use", changeFrequency: "yearly", priority: 0.2 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
